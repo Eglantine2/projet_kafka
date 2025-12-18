@@ -25,7 +25,6 @@ Ce projet permet d’aborder les notions essentielles de Kafka : topics, partiti
 
 Depuis le dossier du projet :
 
-```powershell
 docker compose up -d
 
 On doit alors voir:
@@ -35,5 +34,25 @@ kafka       Up
 ## 2. Créer le topic Kafka
 
 docker exec -it kafka kafka-topics --create --topic chat-messages --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1
+
+On vérifie la création:
+
+docker exec -it kafka kafka-topics --list --bootstrap-server localhost:9092
+
+On lance le consumer dans un nouveau terminale:
+
+docker exec -it kafka kafka-console-consumer --topic chat-messages --bootstrap-server localhost:9092 --from-beginning
+
+On lance le producer encore dans un nouveau terminale:
+
+docker exec -it kafka kafka-console-producer --topic chat-messages --bootstrap-server localhost:9092
+
+Et le chat fonctionne quand les messages que l'on écrit le terminale de producer apparaissent dans le terminale de consumer.
+
+<img width="1414" height="174" alt="image" src="https://github.com/user-attachments/assets/7797e9b2-dcc5-4545-a3ec-0581c0dc663f" />
+
+
+
+
 
 
