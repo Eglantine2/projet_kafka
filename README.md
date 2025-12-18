@@ -49,7 +49,11 @@ docker exec -it kafka kafka-console-producer --topic chat-messages --bootstrap-s
 
 Et le chat fonctionne quand les messages que l'on écrit le terminale de producer apparaissent dans le terminale de consumer.
 
-<img width="1414" height="174" alt="image" src="https://github.com/user-attachments/assets/7797e9b2-dcc5-4545-a3ec-0581c0dc663f" />
+<img width="1426" height="145" alt="image" src="https://github.com/user-attachments/assets/faae9bf9-15d7-4f9c-960b-172f94e8eb08" />
+
+
+<img width="1585" height="112" alt="image" src="https://github.com/user-attachments/assets/52fbf9cb-afa8-4fbd-a2ee-e5301268d4de" />
+
 
 
 
